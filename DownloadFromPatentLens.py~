@@ -16,6 +16,8 @@ print("got this far")
 
 
 
+#attempt = StringIO(zippedFile.read())
+print "made attempt"
 file = gzip.GzipFile(fileobj=zippedFile.read())
 
 #file = gzip.open("/Users/melissafrechette/Downloads/nt-inClaims.fsa.gz", "rb")
