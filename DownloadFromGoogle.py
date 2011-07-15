@@ -33,9 +33,13 @@ for each in refs:
 
     
     doc = zipfile.ZipFile(StringIO(urlopen(each).read()))
+<<<<<<< HEAD
     list = doc.namelist()
 
     print list
+=======
+    list = doc.infolist()
+>>>>>>> 0ccbda6bca0f19eec3d40a6588bf23b020cf183f
     
     for name in list:
         
@@ -44,7 +48,11 @@ for each in refs:
         write = False
         skip = False
 
+<<<<<<< HEAD
         listing = SoupStrainer('SEQUENCE LISTING')
+=======
+        listing = SoupStrainer(text = re.compile('SEQUENCE LISTING'))
+>>>>>>> 0ccbda6bca0f19eec3d40a6588bf23b020cf183f
         soup = BeautifulSoup(file, parseOnlyThese=listing)
 
         print soup.prettify()

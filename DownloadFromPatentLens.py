@@ -16,11 +16,16 @@ print("got this far")
 
 
 
+<<<<<<< HEAD
 file = gzip.GzipFile(fileobj=StringIO(zippedFile.read()))
+=======
+file = gzip.GzipFile(fileobj=zippedFile.read())
+>>>>>>> 0ccbda6bca0f19eec3d40a6588bf23b020cf183f
 
 #file = gzip.open("/Users/melissafrechette/Downloads/nt-inClaims.fsa.gz", "rb")
 print("opened")
 
+<<<<<<< HEAD
 print (file.read())
 
 output = open("/m/canvas1/mfrechet/nt-inClaims.fsa", 'w')
@@ -42,6 +47,10 @@ seqs.add(seq)
 for seq in seqs:
     output.write(seq)
 
+=======
+output = open("/m/canvas1/mfrechet/nt-inClaims.fsa", 'w')
+output.write(str(file.read()))
+>>>>>>> 0ccbda6bca0f19eec3d40a6588bf23b020cf183f
 output.close()
 
 print("finished")
